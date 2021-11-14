@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+
+  <link rel="stylesheet" href="scss/style.css">
+
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>ROCK PAPER SCISSORS</h1>
+      <div class="score">
+        <p class="score-title">SCORE</p>
+        <p class="score-total">00</p>
+      </div>
+    </header>
+    <main>
+      <div class="original">
+        <div class="hand paper" onclick="play('paper')">
+          <div class="bg-circle paper-bg"></div>
+          <button><img src="images/icon-paper.svg" alt="paper"></button>
+        </div>
+        <div class="hand scissors" onclick="play('scissors')">
+          <div class="bg-circle scissors-bg"></div>
+          <button><img src="images/icon-scissors.svg" alt="paper"></button>
+        </div>
+        <div class="hand rock" onclick="play('rock')">
+          <div class="bg-circle rock-bg"></div>
+          <button><img src="images/icon-rock.svg" alt="paper"></button>
+        </div>
+        <div class="bg"><img src="images/bg-triangle.svg" alt="triangle"></div>
+      </div>
+
+      <div class="step-2">
+        <div class="player-pick">
+          <h3>YOU PICKED</h3>
+          <div class="hand-pick player">
+            <!-- Javascript created HTML here-->
+          </div>
+        </div>
+        <div class="computer-pick">
+          <h3>THE HOUSE PICKED</h3>
+          <div class="hand-pick computer">
+            <div class="dark-circle"></div>
+            <!-- Javascript created HTML here-->
+          </div>
+        </div>
+      </div>
+
+      <div class="step-3">
+        <div class="player-pick">
+          <h3>YOU PICKED</h3>
+          <div class="hand-pick player">
+            <div class="hand paper">
+              <!-- Javascript created HTML here-->
+            </div>
+          </div>
+        </div>
+        <div class="play-again">
+          <p id="result">YOU WIN</p>
+          <button onclick="playAgain()">PLAY AGAIN</button>
+        </div>
+        <div class="computer-pick">
+          <h3>THE HOUSE PICKED</h3>
+          <div class="hand-pick computer">
+            <!-- Javascript created HTML here-->
+          </div>
+        </div>
+      </div>
+      <div class="rule-modal">
+        <div class="modal">
+          <div class="modal-head">
+            <h3>RULES</h3>
+            <button onclick="displayRules()"><img src="images/icon-close.svg" alt="close"></button>
+          </div>
+          <img src="images/image-rules.svg" alt="">
+        </div>
+      </div>
+      <button class="rules original-rules" onclick="displayRules()">RULES</button>
+    </main>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

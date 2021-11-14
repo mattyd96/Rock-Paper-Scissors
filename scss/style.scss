@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+body {
+    margin: 0;
+    height: calc(100vh - 5rem);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+
+.container {
+    margin: auto;
+    height: calc(100vh-5rem);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border: .2rem solid hsl(217, 16%, 45%);
+    border-radius: 1rem;
+    margin-top: 2rem;
+    max-width: 42rem;
+    margin: auto;
+
+    h1 {
+        color: #fff;
+        font-weight: 700;
+        font-size: 2.5rem;
+        max-width: 10rem;
+        margin: 0;
+        line-height: 2.1rem;
+    }
+
+    .score {
+        text-align: center;
+        width: 8rem;
+        background-color: #fff;
+        border-radius: .5rem;
+        padding: .5rem;
+        
+
+        .score-title {
+            letter-spacing: .3rem;
+            color: hsl(229, 64%, 46%);
+            margin: 0;
+        }
+
+        .score-total {
+            font-weight: 700;
+            font-size: 4rem;
+            margin: 0;
+            margin-top: -.5rem;
+            color: hsl(229, 25%, 31%);
+        }
+    }
+}
+
+main {
+    margin: auto;
+    margin-top: 3rem;
+}
+
+.original {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-width: 38rem;
+    margin: auto;
+}
+
+.paper {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    z-index: 2;
+}
+.scissors {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    z-index: 2;
+}
+.rock {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    z-index: 2;
+}
+
+.bg {
+    grid-column: 1/3;
+    grid-row: 1/3;
+    z-index: 1;
+    margin: auto;
+}
+
+.hand {
+    display: grid;
+    margin: 1.5rem auto;
+
+    button:hover, &:hover {
+        cursor: pointer;
+    }
+
+    button {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin: auto;
+        border-style: none;
+        width: 9rem;
+        height: 9rem;
+        border-radius: 10rem;
+        box-shadow: inset 0rem .5rem hsl(217, 55%, 84%);
+        background-color: #fff;
+    }
+
+    img {
+        width: 4rem;
+    }
+
+    .bg-circle {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        width: 12rem;
+        height: 12rem;
+        border-radius: 12rem;
+        margin: auto;
+    }
+
+    .paper-bg {
+        background-color: hsl(230, 89%, 65%);
+        box-shadow: inset 0rem -.5rem hsl(230, 89%, 62%);
+    }
+
+    .scissors-bg {
+        background-color: hsl(40, 84%, 53%);
+        box-shadow: inset 0rem -.5rem hsl(39, 89%, 49%);
+    }
+
+    .rock-bg {
+        background-color: hsl(349, 70%, 56%);
+        box-shadow: inset 0rem -.5rem hsl(349, 71%, 52%);
+    }
+}
+
+.rules {
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    width: 8rem;
+    height: 2.5rem;
+    border-radius: .25rem;
+    border: .1rem solid hsl(217, 16%, 45%);
+    background-color: transparent;
+    color: #fff;
+    letter-spacing: .2rem;
+    font-weight: 600;
+}
+
+.rules:hover {
+    cursor: pointer;
+}
+
+//step 2
+
+.step-2, .step-3 {
+    //display: flex;
+    display: none;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 1.3rem;
+    letter-spacing: .1rem;
+    color: #fff;
+    max-width: 45rem;
+    margin: auto;
+
+    .player-pick, .computer-pick {
+        width: 45%;
+    }
+}
+
+.step-2 {
+    display: none;
+}
+
+.step-3 {
+    max-width: 70rem;
+    margin: auto;
+    .win-circle {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        width: 10rem;
+        height: 10rem;
+        border-radius: 10rem;
+        margin: auto;
+        box-shadow: 0 0 0 8.5rem hsla(0, 0%, 100%, .03), 
+                    0 0 0 12.5rem hsla(0, 0%, 100%, .03), 
+                    0 0 0 17.5rem hsla(0, 0%, 100%, .03);
+    }
+
+    .play-again {
+        width: 45%;
+        margin: auto;
+
+        p {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin: 0;
+            margin-top: 3rem;
+        }
+
+        button {
+            width: 14rem;
+            height: 3rem;
+            border-radius: .5rem;
+            border-style: none;
+            margin-top: 1rem;
+            font-size: .9rem;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            color: hsl(229, 25%, 31%);
+        }
+    }
+}
+
+
+
+.hand-pick {
+
+    .hand {
+        margin-top: 4rem;
+        button {
+            width: 14rem;
+            height: 14rem;
+            border-radius: 10rem;
+            box-shadow: inset 0rem .65rem hsl(217, 55%, 84%);
+            background-color: #fff;
+        }
+    
+        img {
+            width: 6rem;
+        }
+
+        .bg-circle {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            width: 19rem;
+            height: 19rem;
+            border-radius: 30rem;
+            margin: auto;
+        }
+
+        .paper-bg {
+            box-shadow: inset 0rem -.7rem hsl(230, 89%, 62%);
+        }
+    
+        .scissors-bg {
+            box-shadow: inset 0rem -.7rem hsl(39, 89%, 49%);
+        }
+    
+        .rock-bg {
+            box-shadow: inset 0rem -.7rem hsl(349, 71%, 52%);
+        }
+    }
+}
+
+
+.dark-circle {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 25rem;
+    background-color: rgba(2, 9, 37, .2);
+    margin: auto;
+    margin-top: 8rem;
+}
+
+.rule-modal {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 6;
+
+    .modal {
+        display: flex;
+        flex-direction: column;
+        max-width: 20rem;
+        margin: auto;
+        margin-top: calc(50vh - 217.35px);
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 1rem;
+    }
+
+    .modal-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3rem;
+
+        h3 {
+            font-size: 2rem;
+            color: hsl(229, 25%, 31%);
+            margin: 0;
+        }
+
+        button {
+            background-color: transparent;
+            border-style: none;
+            
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.display {
+    display: block;
+}
